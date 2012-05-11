@@ -2,7 +2,7 @@
 
 <table>
   <tr>
-    <th>Name</th>
+    <th>Title</th>
     <th>Description</th>
     <th>User</th>
     <th></th>
@@ -12,7 +12,7 @@
 
 <% @topics.each do |topic| %>
   <tr>
-    <td><%= topic.name %></td>
+    <td><%= topic.title %></td>
     <td><%= topic.description %></td>
     <td><%= topic.user_id %></td>
     <td><%= link_to 'Show', topic %></td>

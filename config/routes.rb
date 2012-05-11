@@ -1,4 +1,6 @@
 Techtalk::Application.routes.draw do
+  resources :topics
+
   resources :users
 
   # The priority is based upon order of creation:

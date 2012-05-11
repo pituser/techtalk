@@ -1,0 +1,4 @@
+== TechTalk
+
+Simple Ruby on Rails application for managing and voting technical talks.
+

@@ -1,4 +1,10 @@
 Techtalk::Application.routes.draw do
+  get "session/new"
+
+  get "session/create"
+
+  get "session/destroy"
+
   root to: 'topics#index'
 
   resources :topics

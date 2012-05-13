@@ -1,4 +1,10 @@
 Techtalk::Application.routes.draw do
+  get "sessions/new"
+
+  get "sessions/create"
+
+  get "sessions/destroy"
+
   get "session/new"
 
   get "session/create"

@@ -38,6 +38,12 @@
         <%= link_to "Sign up now!", "#", class: "btn btn-large btn-primary" %>
       </p>  
     </div>
+    
+    <% if signed_in? %>
+      Signed in as <%= current_user.name %>. <%= link_to "Signout", signout_path, method: 'delete' %>
+    <% else %>
+      Not signed in.
+    <% end %>
   
     <div class="row">
       <div class="span9"><%= yield %></div>

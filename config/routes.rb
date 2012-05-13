@@ -1,21 +1,17 @@
 Techtalk::Application.routes.draw do
-  get "sessions/new"
-
-  get "sessions/create"
-
-  get "sessions/destroy"
-
-  get "session/new"
-
-  get "session/create"
-
-  get "session/destroy"
 
   root to: 'topics#index'
 
   resources :topics
 
   resources :users
+  
+  resources :sessions, only: [:new, :create, :destroy]
+  
+  match '/signup',  to: 'users#new'
+  match '/signin',  to: 'sessions#new'
+  match '/signout', to: 'sessions#destroy', via: :delete
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
